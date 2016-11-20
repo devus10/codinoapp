@@ -1,4 +1,4 @@
-Use `npm install` to install npm dependencies, bower dependencies and TypeScript typings.
+`npm install` to install npm dependencies, bower dependencies and TypeScript typings.
 
-Use `npm start` to run application.
-> Application starts on 9999 port by default. You can change port number in `bs-config.json` file.
+`npm start` to run the application.
+> Application starts on 9999 port by default. You can change the port number in `bs-config.json` file.
