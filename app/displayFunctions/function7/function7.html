@@ -1,0 +1,12 @@
+<function-description description="{{vm.description}}"></function-description>
+<form name="function7Form" class="form-inline" novalidate>
+    <div class="form-group">
+        <label for="elementId">ID elementu: </label>
+        <input id="elementId" type="number" ng-model="vm.elementId" class="form-control"/>
+        <button type="submit" ng-click="vm.getParentsCountForElement()" class="btn btn-primary">Wyświetl</button>
+    </div>
+</form>
+<div ng-hide="vm.idNotFound">
+    <span ng-show="vm.searchedDomainObject">Wynik: {{vm.elementName}} <span ng-if="vm.parentsCountResult">- {{vm.parentsCountResult}}</span></span>
+</div>
+<div ng-show="vm.idNotFound">Nie znaleziono obiektu o podanym ID.</div>

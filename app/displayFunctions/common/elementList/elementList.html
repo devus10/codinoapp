@@ -1,0 +1,62 @@
+<div ng-if="vm.typeOfDomainList !== 'NoType'" class="container">
+    <div ng-if="vm.typeOfDomainList === 'BikerPerson'">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th ng-if="vm.listToShow[0].record">Rekord</th>
+                <th>Wiek</th>
+                <th ng-if="vm.listToShow[0].city">Miasto</th>
+                <th ng-if="vm.listToShow[0].parent_id">ID rodzica</th>
+            </tr>
+            <tr ng-repeat="biker in vm.listToShow">
+                <td>{{biker.id}}</td>
+                <td>{{biker.name}}</td>
+                <td ng-if="biker.record">{{biker.record}}</td>
+                <td>{{biker.age}}</td>
+                <td ng-if="biker.city">{{biker.city}}</td>
+                <td ng-if="biker.parent_id">{{biker.parent_id}}</td>
+            </tr>
+        </table>
+    </div>
+    <div ng-if="vm.typeOfDomainList === 'Person'">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th ng-if="vm.listToShow[0].surname">Nazwisko</th>
+                <th>Wiek</th>
+                <th ng-if="vm.listToShow[0].city">Miasto</th>
+                <th>ID rodzica</th>
+            </tr>
+            <tr ng-repeat="person in vm.listToShow">
+                <td>{{person.id}}</td>
+                <td>{{person.name}}</td>
+                <td ng-if="person.surname !== undefined">{{person.surname}}</td>
+                <td>{{person.age}}</td>
+                <td ng-if="person.city !== undefined">{{person.city}}</td>
+                <td>{{person.parent_id}}</td>
+            </tr>
+        </table>
+    </div>
+    <div ng-if="vm.typeOfDomainList === 'ShelterDog'">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th>Wiek</th>
+                <th ng-if="vm.listToShow[0].owner">Właściciel</th>
+                <th ng-if="vm.listToShow[0].vaccine">Szczepionka</th>
+                <th ng-if="vm.listToShow[0].parent_id !== undefined">ID rodzica</th>
+            </tr>
+            <tr ng-repeat="dog in vm.listToShow">
+                <td>{{dog.id}}</td>
+                <td>{{dog.name}}</td>
+                <td>{{dog.age}}</td>
+                <td ng-if="dog.owner">{{dog.owner}}</td>
+                <td ng-if="dog.vaccine">{{dog.vaccine}}</td>
+                <td ng-if="dog.parent_id !== undefined">{{dog.parent_id}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

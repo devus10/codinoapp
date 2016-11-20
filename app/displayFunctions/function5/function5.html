@@ -1,0 +1,11 @@
+<function-description description="{{vm.description}}"></function-description>
+<form name="function5Form" class="form-inline" novalidate>
+    <div class="form-group">
+        <label for="idElementFrom">Od: </label>
+        <input id="idElementFrom" type="number" ng-model="vm.idElementFrom" class="form-control"/>
+        <label for="idElementTo">Do: </label>
+        <input id="idElementTo" type="number" ng-model="vm.idElementTo" class="form-control"/>
+    </div>
+    <button type="submit" ng-click="vm.showFilteredList()" class="btn btn-primary">Wyświetl</button>
+</form>
+<element-list list-to-show="vm.filteredList"></element-list>

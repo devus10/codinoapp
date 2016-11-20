@@ -1,0 +1,20 @@
+<function-description description="{{vm.description}}"></function-description>
+<form name="function6Form" class="form-inline" novalidate>
+    <div class="form-group">
+        <label for="countGreaterThan">Liczba powtórzeń imienia większa niż:</label>
+        <input id="countGreaterThan" type="number" ng-model="vm.countGreaterThan" class="form-control"/>
+    </div>
+    <button type="submit" ng-click="vm.showNamesAndCounts()" class="btn btn-primary">Wyświetl</button>
+</form>
+<div>
+    <table ng-repeat="nameCount in vm.sortedAndLimitedNameCountList">
+        <tr>
+            <th>Imię</th>
+            <th>Powtórzenia</th>
+        </tr>
+        <tr>
+            <td>{{nameCount.name}}</td>
+            <td>{{nameCount.count}}</td>
+        </tr>
+    </table>
+</div>

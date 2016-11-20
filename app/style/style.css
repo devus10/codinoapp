@@ -1,0 +1,17 @@
+.main-div {
+    width: 700px;
+}
+
+.drop-file-box {
+    height: 300px;
+    border: 2px solid grey;
+    border-radius: 7px;
+    opacity: 0.5;
+}
+
+.drop-file-box p {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 250px;
+    letter-spacing: 3px;
+}

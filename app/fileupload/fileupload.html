@@ -1,0 +1,7 @@
+<div ngf-select="vm.uploadFile($file)" ngf-drop="vm.uploadFile($file)" class="container-fluid drop-box drop-file-box"
+     ngf-drag-over-class="'dragover'"
+     draggable="true" ngf-pattern="'.json'" ng-model="vm.files">
+    <p>Upuść plik lub kliknij, by wybrać plik.</p>
+</div>
+<div ngf-no-file-drop>Twoja przeglądarka nie obsługuje funkcji Drag/Drop.</div>
+<select-function ng-if="vm.isFileLoaded()"></select-function>

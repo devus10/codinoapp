@@ -1,0 +1,29 @@
+{
+  "name": "codino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "grunt build",
+    "start": "grunt build && concurrently \"grunt watch\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "postinstall": "bower install && typings install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.38",
+    "concurrently": "^3.1.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-html2js": "^0.3.6",
+    "grunt-include-source": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.3",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.0.8",
+    "typings": "^2.0.0"
+  }
+}

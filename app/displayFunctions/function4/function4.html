@@ -1,0 +1,9 @@
+<function-description description="{{vm.description}}"></function-description>
+<form name="function4Form" class="form-inline" novalidate>
+    <div class="form-group">
+        <label for="elementId">ID:</label>
+        <input id="elementId" type="number" ng-model="vm.elementId" class="form-control"/>
+    </div>
+    <button type="submit" ng-click="vm.showSortedFilteredList()" class="btn btn-primary">Wyświetl</button>
+</form>
+<element-list list-to-show="vm.filteredList" sort-by="id"></element-list>

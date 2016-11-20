@@ -1,0 +1,9 @@
+<function-description description="{{vm.description}}"></function-description>
+<form name="function9Form" class="form-inline" novalidate>
+    <div class="form-group">
+        <label for="numberOfElements">Podaj liczbę elementów do wyświetlenia: </label>
+        <input id="numberOfElements" type="number" ng-model="vm.numberOfElements" class="form-control"/>
+        <button type="submit" ng-click="vm.showRandomList()" class="btn btn-primary">Wyświetl</button>
+    </div>
+</form>
+<element-list list-to-show="vm.randomList"></element-list>

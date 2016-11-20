@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="codino">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- include: "type": "css", "files": "app/style/**/*.css" -->
+</head>
+<body>
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="vendor/ng-file-upload/ng-file-upload.js"></script>
+<script src="vendor/lodash/dist/lodash.js"></script>
+<script src="vendor/tether/dist/js/tether.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!--include: "type": "js", "files": "app/**/*.module.js" -->
+<!--include: "type": "js", "files": "app/**/*.service.js" -->
+<!--include: "type": "js", "files": "app/**/*.routes.js" -->
+<!--include: "type": "js", "files": "app/**/*.directive.js" -->
+<!--include: "type": "js", "files": "app/**/*.controller.js" -->
+
+<div class="container-fluid main-div">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a ui-sref="codino.fileupload" class="nav-link">Załaduj plik</a>
+        </li>
+        <li class="nav-item">
+            <a ui-sref="codino.selectFunction" class="nav-link">Wybierz funkcję</a>
+        </li>
+    </ul>
+    <div ui-view="main"></div>
+</div>
+</body>
+</html>

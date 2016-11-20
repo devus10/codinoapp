@@ -1,0 +1,13 @@
+<p>Typ elementów załadowanego pliku:
+    <strong>
+        <span ng-show="vm.typeOfDomainList === 'Person'">Człowiek</span>
+        <span ng-show="vm.typeOfDomainList === 'BikerPerson'">Rowerzysta</span>
+        <span ng-show="vm.typeOfDomainList === 'ShelterDog'">Pies</span>
+    </strong>
+</p>
+<div ng-if="vm.typeOfDomainList !== 'NoType'">
+    <ng-transclude></ng-transclude>
+</div>
+<div ng-if="vm.typeOfDomainList === 'NoType'">
+    Załadowany plik posiada strukturę niezgodną z żadnym typem.
+</div>

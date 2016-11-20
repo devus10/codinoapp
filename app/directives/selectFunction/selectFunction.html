@@ -1,0 +1,20 @@
+<div class="container-fluid" ng-if="vm.fileUploaded">
+    <div class="alert alert-success" role="alert">
+        <p>Plik <strong>{{vm.fileName}}</strong> został załadowany. Wpisz numer funkcji do wyświetlenia.</p>
+    </div>
+    <form name="form" ng-submit="form.$valid && vm.onSelectDisplayFunction()" novalidate>
+        <div class="form-group">
+            <label for="functionNumber">Numer funkcji (1-11):</label>
+            <input name="functionNumber" id="functionNumber" type="number" min="1" max="11"
+                   ng-model="vm.selectedFunction" class="form-control" required=""/>
+        </div>
+        <div class="form-control-feedback text-danger"
+             ng-show="form.functionNumber.$error.required || form.functionNumber.$error.min || form.functionNumber.$error.max">
+            Numer funkcji musi pochodzić z przedziału 1-11.
+        </div>
+        <button type="submit" class="btn btn-primary">Wybierz</button>
+    </form>
+</div>
+<div ng-if="!vm.fileUploaded">
+    Załaduj plik.
+</div>

@@ -1,0 +1,22 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+#app
+app/**/*.js
+app/**/*.js.map
+
+# node
+node_modules
+npm-debug.log
+
+# bower
+vendor
+
+# typescript
+typings
+.tscache
+
+build
