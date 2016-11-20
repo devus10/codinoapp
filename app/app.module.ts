@@ -4,6 +4,6 @@ namespace codino {
         [
             "ui.router",
             "codino.displayFunctions",
-            "FileUploadModule"
+            "codino.fileupload"
         ]);
 }

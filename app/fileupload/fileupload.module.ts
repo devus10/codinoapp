@@ -1,5 +1,5 @@
 namespace codino.fileupload {
-    export var fileUploadModule = angular.module("FileUploadModule", 
+    export var fileUploadModule = angular.module("codino.fileupload", 
         [
             "ngFileUpload"
         ])
